@@ -7,19 +7,28 @@
 //
 
 import UIKit
+import QuartzCore
 
 class ViewController: UIViewController {
+    
+    let layer = CALayer()
                             
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        layer.position = CGPointMake(self.view.bounds.width/2, self.view.bounds.height/2)
+        layer.bounds = CGRectMake(0, 0, 50, 60)
+        layer.backgroundColor = UIColor.redColor().CGColor
+        self.view.layer.addSublayer(layer)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(animated: Bool) {
+        let animation = CABasicAnimation()
+        animation.fromValue = NSValue(CGPoint: CGPointMake(100, 100))
+        animation.toValue = NSValue(CGPoint: CGPointMake(200, 300))
+        layer.position = CGPointMake(200, 300)
+        layer.addAnimation(animation, forKey: "position")
     }
-
 
 }
 
