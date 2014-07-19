@@ -15,19 +15,25 @@ class ViewController: UIViewController {
                             
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        layer.position = CGPointMake(self.view.bounds.width/2, self.view.bounds.height/2)
-        layer.bounds = CGRectMake(0, 0, 50, 60)
-        layer.backgroundColor = UIColor.redColor().CGColor
-        self.view.layer.addSublayer(layer)
+        self.drawCircle()
     }
 
-    override func viewWillAppear(animated: Bool) {
-        let animation = CABasicAnimation()
-        animation.fromValue = NSValue(CGPoint: CGPointMake(100, 100))
-        animation.toValue = NSValue(CGPoint: CGPointMake(200, 300))
-        layer.position = CGPointMake(200, 300)
-        layer.addAnimation(animation, forKey: "position")
+    func drawCircle() {
+        let radius:CGFloat = 100
+        let circle = CAShapeLayer()
+        circle.path = UIBezierPath(roundedRect: CGRectMake(0.0, 0.0, 2 * radius , 2 * radius ), cornerRadius: radius).CGPath
+        circle.position = CGPointMake(CGRectGetMidX(self.view.bounds) - radius, CGRectGetMidY(self.view.bounds) - radius)
+        circle.strokeColor = UIColor.blackColor().CGColor
+        circle.fillColor = UIColor.clearColor().CGColor
+        circle.lineWidth = 5
+        self.view.layer.addSublayer(circle)
+        
+        let drawAnimation = CABasicAnimation()
+        drawAnimation.duration = 1
+        drawAnimation.repeatCount = 1
+        drawAnimation.fromValue = 0
+        drawAnimation.toValue = 1
+        circle.addAnimation(drawAnimation, forKey: "strokeEnd")
     }
 
 }
