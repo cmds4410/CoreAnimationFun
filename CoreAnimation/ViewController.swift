@@ -34,15 +34,21 @@ class ViewController: UIViewController {
         drawAnimation.fromValue = 0
         drawAnimation.toValue = 1
         circle.addAnimation(drawAnimation, forKey: "strokeEnd")
-        
+
         let growAnimation = CABasicAnimation()
         growAnimation.duration = 1
         growAnimation.fromValue = 0
         growAnimation.toValue = circle.lineWidth
         circle.addAnimation(growAnimation, forKey: "lineWidth")
         
+        let colorAnimation = CABasicAnimation()
+        colorAnimation.duration = 1
+        colorAnimation.fromValue = UIColor.blackColor().CGColor
+        colorAnimation.toValue = circle.strokeColor
+        circle.addAnimation(colorAnimation, forKey: "strokeColor")
+        
         let animations = CAAnimationGroup()
-        animations.animations = [drawAnimation, growAnimation]
+        animations.animations = [drawAnimation, growAnimation, colorAnimation]
         circle.addAnimation(animations, forKey: nil)
     }
 
