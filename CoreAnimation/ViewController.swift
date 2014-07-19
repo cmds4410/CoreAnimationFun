@@ -31,10 +31,19 @@ class ViewController: UIViewController {
         
         let drawAnimation = CABasicAnimation()
         drawAnimation.duration = 1
-        drawAnimation.repeatCount = 1
         drawAnimation.fromValue = 0
         drawAnimation.toValue = 1
         circle.addAnimation(drawAnimation, forKey: "strokeEnd")
+        
+        let growAnimation = CABasicAnimation()
+        growAnimation.duration = 1
+        growAnimation.fromValue = 0
+        growAnimation.toValue = 20
+        circle.addAnimation(growAnimation, forKey: "lineWidth")
+        
+        let animations = CAAnimationGroup()
+        animations.animations = [drawAnimation, growAnimation]
+        circle.addAnimation(animations, forKey: nil)
     }
 
 }
