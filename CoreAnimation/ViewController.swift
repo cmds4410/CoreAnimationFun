@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     func drawCircle() {
         let radius:CGFloat = 100
         let circle = CAShapeLayer()
-        circle.path = UIBezierPath(roundedRect: CGRectMake(0.0, 0.0, 2 * radius , 2 * radius ), cornerRadius: radius).CGPath
+        circle.path = UIBezierPath(roundedRect: CGRectMake(0.0, 0.0, 2 * radius , 2 * radius), cornerRadius: radius).CGPath
         circle.position = CGPointMake(CGRectGetMidX(self.view.bounds) - radius, CGRectGetMidY(self.view.bounds) - radius)
         circle.strokeColor = UIColor.blackColor().CGColor
         circle.fillColor = UIColor.clearColor().CGColor
