@@ -28,21 +28,23 @@ class ViewController: UIViewController {
         circle.fillColor = UIColor.clearColor().CGColor
         circle.lineWidth = 20
         self.view.layer.addSublayer(circle)
+
+        let duration = 1.0
         
         let drawAnimation = CABasicAnimation()
-        drawAnimation.duration = 1
+        drawAnimation.duration = duration
         drawAnimation.fromValue = 0
-        drawAnimation.toValue = 1
+        drawAnimation.toValue = duration
         circle.addAnimation(drawAnimation, forKey: "strokeEnd")
 
         let growAnimation = CABasicAnimation()
-        growAnimation.duration = 1
+        growAnimation.duration = duration
         growAnimation.fromValue = 0
         growAnimation.toValue = circle.lineWidth
         circle.addAnimation(growAnimation, forKey: "lineWidth")
         
         let colorAnimation = CABasicAnimation()
-        colorAnimation.duration = 1
+        colorAnimation.duration = duration
         colorAnimation.fromValue = UIColor.blackColor().CGColor
         colorAnimation.toValue = circle.strokeColor
         circle.addAnimation(colorAnimation, forKey: "strokeColor")
