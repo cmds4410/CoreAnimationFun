@@ -12,10 +12,14 @@ import QuartzCore
 class ViewController: UIViewController {
     
     let layer = CALayer()
+    var numLabel:UILabel?
+    var count = 0
+    var timer: NSTimer?
                             
     override func viewDidLoad() {
         super.viewDidLoad()
         self.drawCircle()
+        self.drawNumbers()
     }
 
     func drawCircle() {
@@ -52,6 +56,39 @@ class ViewController: UIViewController {
         let animations = CAAnimationGroup()
         animations.animations = [drawAnimation, growAnimation, colorAnimation]
         circle.addAnimation(animations, forKey: nil)
+    }
+
+    func drawNumbers() {
+        let labelSize:CGFloat = 70
+        let centerPoint:CGPoint = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds))
+        self.numLabel = UILabel(frame: CGRectMake(centerPoint.x - labelSize/2, centerPoint.y - labelSize/2, labelSize, labelSize))
+        let label = self.numLabel!
+        label.textAlignment = NSTextAlignment.Center
+        label.font = UIFont.systemFontOfSize(40)
+        self.view.addSubview(numLabel)
+        
+        label.text = "0"
+        
+        let maxVal = 100
+        let duration:CGFloat = 1 / CGFloat(maxVal)
+        
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(duration, target: self, selector: Selector("incrementLabel"), userInfo: nil, repeats: true)
+        
+        self.timer!.fire()
+        
+    }
+    
+    func incrementLabel() {
+        if ( self.count >= 100 ) {
+            if ( self.timer ) {
+                self.timer!.invalidate()
+                self.timer = nil
+            }
+        }
+        else {
+            self.count++
+            self.numLabel!.text = "\(count)"
+        }
     }
 
 }
