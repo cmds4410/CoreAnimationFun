@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         let growAnimation = CABasicAnimation()
         growAnimation.duration = 1
         growAnimation.fromValue = 0
-        growAnimation.toValue = 20
+        growAnimation.toValue = circle.lineWidth
         circle.addAnimation(growAnimation, forKey: "lineWidth")
         
         let animations = CAAnimationGroup()
