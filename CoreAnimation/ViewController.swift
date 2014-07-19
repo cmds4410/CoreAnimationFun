@@ -21,11 +21,13 @@ class ViewController: UIViewController {
     func drawCircle() {
         let radius:CGFloat = 100
         let circle = CAShapeLayer()
-        circle.path = UIBezierPath(roundedRect: CGRectMake(0.0, 0.0, 2 * radius , 2 * radius), cornerRadius: radius).CGPath
-        circle.position = CGPointMake(CGRectGetMidX(self.view.bounds) - radius, CGRectGetMidY(self.view.bounds) - radius)
-        circle.strokeColor = UIColor.blackColor().CGColor
+        let centerPoint:CGPoint = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds))
+        println("center: \(centerPoint)")
+        let partialCircle = UIBezierPath(arcCenter: centerPoint, radius: radius, startAngle: M_PI * 3/4, endAngle: M_PI * 1/4, clockwise: true).CGPath
+        circle.path = partialCircle
+        circle.strokeColor = UIColor.greenColor().CGColor
         circle.fillColor = UIColor.clearColor().CGColor
-        circle.lineWidth = 5
+        circle.lineWidth = 20
         self.view.layer.addSublayer(circle)
         
         let drawAnimation = CABasicAnimation()
