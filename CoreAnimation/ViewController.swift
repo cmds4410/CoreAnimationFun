@@ -22,7 +22,6 @@ class ViewController: UIViewController {
         let radius:CGFloat = 100
         let circle = CAShapeLayer()
         let centerPoint:CGPoint = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds))
-        println("center: \(centerPoint)")
         let partialCircle = UIBezierPath(arcCenter: centerPoint, radius: radius, startAngle: M_PI * 3/4, endAngle: M_PI * 1/4, clockwise: true).CGPath
         circle.path = partialCircle
         circle.strokeColor = UIColor.greenColor().CGColor
