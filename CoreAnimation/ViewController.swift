@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         circle.path = partialCircle
         circle.strokeColor = UIColor.greenColor().CGColor
         circle.fillColor = UIColor.clearColor().CGColor
-        circle.lineWidth = 20
+        circle.lineWidth = 30
         self.view.layer.addSublayer(circle)
 
         let duration = 1.0
