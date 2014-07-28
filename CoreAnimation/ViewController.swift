@@ -23,10 +23,13 @@ class ViewController: UIViewController {
     }
 
     func drawCircle() {
-        let radius:CGFloat = 100
+        let radius:CGFloat = 100.0
         let circle = CAShapeLayer()
-        let centerPoint:CGPoint = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds))
-        let partialCircle = UIBezierPath(arcCenter: centerPoint, radius: radius, startAngle: M_PI * 3/4, endAngle: M_PI * 1/4, clockwise: true).CGPath
+        let centerPoint:CGPoint = CGPoint(x: CGRectGetMidX(self.view.bounds), y: CGRectGetMidY(self.view.bounds))
+        let startAngle:CGFloat = CGFloat(M_PI * 3/4)
+        let endAngle:CGFloat = CGFloat(M_PI * 1/4)
+        
+        let partialCircle = UIBezierPath(arcCenter: centerPoint, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: true).CGPath
         circle.path = partialCircle
         circle.strokeColor = UIColor.greenColor().CGColor
         circle.fillColor = UIColor.clearColor().CGColor
@@ -70,7 +73,7 @@ class ViewController: UIViewController {
         label.text = "0"
         
         let maxVal = 100
-        let duration:CGFloat = 1 / CGFloat(maxVal)
+        let duration:Double = 1.0 / Double(maxVal)
         
         self.timer = NSTimer.scheduledTimerWithTimeInterval(duration, target: self, selector: Selector("incrementLabel"), userInfo: nil, repeats: true)
         
