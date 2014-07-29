@@ -13,6 +13,7 @@
 		B36F07961979E1260083B46A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B36F07951979E1260083B46A /* Images.xcassets */; };
 		B36F07A21979E1260083B46A /* CoreAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F07A11979E1260083B46A /* CoreAnimationTests.swift */; };
 		B36F07AC1979E1CB0083B46A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B36F07AB1979E1CB0083B46A /* QuartzCore.framework */; };
+		B3AB3B101987257F00A3A040 /* CACircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AB3B0F1987257F00A3A040 /* CACircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		B36F07A01979E1260083B46A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B36F07A11979E1260083B46A /* CoreAnimationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAnimationTests.swift; sourceTree = "<group>"; };
 		B36F07AB1979E1CB0083B46A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B3AB3B0F1987257F00A3A040 /* CACircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CACircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				B36F078E1979E1260083B46A /* AppDelegate.swift */,
 				B36F07901979E1260083B46A /* CAViewController.swift */,
+				B3AB3B0F1987257F00A3A040 /* CACircleView.swift */,
 				B36F07921979E1260083B46A /* Main.storyboard */,
 				B36F07951979E1260083B46A /* Images.xcassets */,
 				B36F078C1979E1260083B46A /* Supporting Files */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3AB3B101987257F00A3A040 /* CACircleView.swift in Sources */,
 				B36F07911979E1260083B46A /* CAViewController.swift in Sources */,
 				B36F078F1979E1260083B46A /* AppDelegate.swift in Sources */,
 			);
