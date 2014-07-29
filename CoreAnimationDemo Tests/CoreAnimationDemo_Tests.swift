@@ -9,7 +9,10 @@
 import UIKit
 import XCTest
 
-class CoreAnimationDemo_Tests: XCTestCase {
+class CoreAnimationDemo_Tests: XCTestCase, CACircleViewDelegate {
+    
+    let testVC = UIViewController()
+    var animationExpectation:XCTestExpectation?
     
     override func setUp() {
         super.setUp()
@@ -26,11 +29,21 @@ class CoreAnimationDemo_Tests: XCTestCase {
         XCTAssert(true, "Pass")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
+    func testAnimationPerformance() {
+        let testView = CACircleView()
+        testView.animationDelegate = self
+        self.testVC.viewWillAppear(true)
+        self.testVC.view.addSubview(testView)
+        testView.drawCircle()
+        
+        self.animationExpectation = self.expectationWithDescription("finished animation")
+        
+        self.waitForExpectationsWithTimeout(1, handler: nil)
+    }
+    
+    func finishedAnimating(succeeded: Bool) {
+        self.animationExpectation?.fulfill()
+        println("yay!")
     }
     
 }

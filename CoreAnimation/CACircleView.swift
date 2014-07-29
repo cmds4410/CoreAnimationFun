@@ -9,12 +9,17 @@
 import UIKit
 import QuartzCore
 
+protocol CACircleViewDelegate {
+    func finishedAnimating(succeeded: Bool) -> ()
+}
+
 class CACircleView: UIView {
     
     var numLabel:UILabel?
     var count = 0
     var timer: NSTimer?
     let layerBuffer:CGFloat = 40
+    var animationDelegate:CACircleViewDelegate?
 
     init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,6 +47,7 @@ class CACircleView: UIView {
         let duration = 1.0
         
         let drawAnimation = CABasicAnimation()
+        drawAnimation.delegate = self
         drawAnimation.duration = duration
         drawAnimation.fromValue = 0
         drawAnimation.toValue = duration
@@ -95,6 +101,13 @@ class CACircleView: UIView {
             self.count++
             self.numLabel!.text = "\(count)"
         }
+    }
+    
+    // MARK: CAAnimationDelegate
+    
+    override func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
+        println("animation complete")
+        self.animationDelegate?.finishedAnimating(flag)
     }
 
     /*
