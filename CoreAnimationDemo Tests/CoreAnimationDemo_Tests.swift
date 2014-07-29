@@ -1,15 +1,15 @@
 //
-//  CoreAnimationTests.swift
-//  CoreAnimationTests
+//  CoreAnimationDemo_Tests.swift
+//  CoreAnimationDemo Tests
 //
-//  Created by Connor Smith on 7/18/14.
+//  Created by Connor Smith on 7/28/14.
 //  Copyright (c) 2014 Connor Smith. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class CoreAnimationTests: XCTestCase {
+class CoreAnimationDemo_Tests: XCTestCase {
     
     override func setUp() {
         super.setUp()
