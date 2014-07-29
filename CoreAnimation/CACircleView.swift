@@ -19,7 +19,9 @@ class CACircleView: UIView {
     private var count = 0
     private var timer: NSTimer?
     private let layerBuffer:CGFloat = 40
+    
     var animationDelegate:CACircleViewDelegate?
+    let animationDuration = 1.0
 
     init(frame: CGRect) {
         super.init(frame: frame)
@@ -44,23 +46,21 @@ class CACircleView: UIView {
         circle.lineWidth = 30
         self.layer.addSublayer(circle)
         
-        let duration = 1.0
-        
         let drawAnimation = CABasicAnimation()
         drawAnimation.delegate = self
-        drawAnimation.duration = duration
+        drawAnimation.duration = self.animationDuration
         drawAnimation.fromValue = 0
-        drawAnimation.toValue = duration
+        drawAnimation.toValue = self.animationDuration
         circle.addAnimation(drawAnimation, forKey: "strokeEnd")
         
         let growAnimation = CABasicAnimation()
-        growAnimation.duration = duration
+        growAnimation.duration = self.animationDuration
         growAnimation.fromValue = 0
         growAnimation.toValue = circle.lineWidth
         circle.addAnimation(growAnimation, forKey: "lineWidth")
         
         let colorAnimation = CABasicAnimation()
-        colorAnimation.duration = duration
+        colorAnimation.duration = self.animationDuration
         colorAnimation.fromValue = UIColor.blackColor().CGColor
         colorAnimation.toValue = circle.strokeColor
         circle.addAnimation(colorAnimation, forKey: "strokeColor")
