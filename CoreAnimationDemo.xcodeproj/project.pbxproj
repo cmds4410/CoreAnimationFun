@@ -27,13 +27,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B36F07891979E1260083B46A /* CoreAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B36F07891979E1260083B46A /* CoreAnimationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreAnimationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B36F078D1979E1260083B46A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B36F078E1979E1260083B46A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B36F07901979E1260083B46A /* CAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAViewController.swift; sourceTree = "<group>"; };
 		B36F07931979E1260083B46A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B36F07951979E1260083B46A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B36F079B1979E1260083B46A /* CoreAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B36F079B1979E1260083B46A /* CoreAnimationDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreAnimationDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B36F07A01979E1260083B46A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B36F07A11979E1260083B46A /* CoreAnimationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAnimationTests.swift; sourceTree = "<group>"; };
 		B36F07AB1979E1CB0083B46A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -63,7 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				B36F07AB1979E1CB0083B46A /* QuartzCore.framework */,
-				B36F078B1979E1260083B46A /* CoreAnimation */,
+				B36F078B1979E1260083B46A /* CoreAnimationDemo */,
 				B36F079E1979E1260083B46A /* CoreAnimationTests */,
 				B36F078A1979E1260083B46A /* Products */,
 			);
@@ -72,13 +72,13 @@
 		B36F078A1979E1260083B46A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B36F07891979E1260083B46A /* CoreAnimation.app */,
-				B36F079B1979E1260083B46A /* CoreAnimationTests.xctest */,
+				B36F07891979E1260083B46A /* CoreAnimationDemo.app */,
+				B36F079B1979E1260083B46A /* CoreAnimationDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B36F078B1979E1260083B46A /* CoreAnimation */ = {
+		B36F078B1979E1260083B46A /* CoreAnimationDemo */ = {
 			isa = PBXGroup;
 			children = (
 				B36F078E1979E1260083B46A /* AppDelegate.swift */,
@@ -88,6 +88,7 @@
 				B36F07951979E1260083B46A /* Images.xcassets */,
 				B36F078C1979E1260083B46A /* Supporting Files */,
 			);
+			name = CoreAnimationDemo;
 			path = CoreAnimation;
 			sourceTree = "<group>";
 		};
@@ -119,9 +120,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B36F07881979E1260083B46A /* CoreAnimation */ = {
+		B36F07881979E1260083B46A /* CoreAnimationDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B36F07A51979E1260083B46A /* Build configuration list for PBXNativeTarget "CoreAnimation" */;
+			buildConfigurationList = B36F07A51979E1260083B46A /* Build configuration list for PBXNativeTarget "CoreAnimationDemo" */;
 			buildPhases = (
 				B36F07851979E1260083B46A /* Sources */,
 				B36F07861979E1260083B46A /* Frameworks */,
@@ -131,14 +132,14 @@
 			);
 			dependencies = (
 			);
-			name = CoreAnimation;
+			name = CoreAnimationDemo;
 			productName = CoreAnimation;
-			productReference = B36F07891979E1260083B46A /* CoreAnimation.app */;
+			productReference = B36F07891979E1260083B46A /* CoreAnimationDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B36F079A1979E1260083B46A /* CoreAnimationTests */ = {
+		B36F079A1979E1260083B46A /* CoreAnimationDemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B36F07A81979E1260083B46A /* Build configuration list for PBXNativeTarget "CoreAnimationTests" */;
+			buildConfigurationList = B36F07A81979E1260083B46A /* Build configuration list for PBXNativeTarget "CoreAnimationDemoTests" */;
 			buildPhases = (
 				B36F07971979E1260083B46A /* Sources */,
 				B36F07981979E1260083B46A /* Frameworks */,
@@ -149,9 +150,9 @@
 			dependencies = (
 				B36F079D1979E1260083B46A /* PBXTargetDependency */,
 			);
-			name = CoreAnimationTests;
+			name = CoreAnimationDemoTests;
 			productName = CoreAnimationTests;
-			productReference = B36F079B1979E1260083B46A /* CoreAnimationTests.xctest */;
+			productReference = B36F079B1979E1260083B46A /* CoreAnimationDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -160,6 +161,7 @@
 		B36F07811979E1250083B46A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CA;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Connor Smith";
 				TargetAttributes = {
@@ -172,7 +174,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B36F07841979E1250083B46A /* Build configuration list for PBXProject "CoreAnimation" */;
+			buildConfigurationList = B36F07841979E1250083B46A /* Build configuration list for PBXProject "CoreAnimationDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -185,8 +187,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B36F07881979E1260083B46A /* CoreAnimation */,
-				B36F079A1979E1260083B46A /* CoreAnimationTests */,
+				B36F07881979E1260083B46A /* CoreAnimationDemo */,
+				B36F079A1979E1260083B46A /* CoreAnimationDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -234,7 +236,7 @@
 /* Begin PBXTargetDependency section */
 		B36F079D1979E1260083B46A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B36F07881979E1260083B46A /* CoreAnimation */;
+			target = B36F07881979E1260083B46A /* CoreAnimationDemo */;
 			targetProxy = B36F079C1979E1260083B46A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -337,7 +339,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = CoreAnimation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CoreAnimationDemo;
 			};
 			name = Debug;
 		};
@@ -348,7 +350,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = CoreAnimation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CoreAnimationDemo;
 			};
 			name = Release;
 		};
@@ -366,7 +368,7 @@
 				);
 				INFOPLIST_FILE = CoreAnimationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CoreAnimationDemoTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -381,7 +383,7 @@
 				);
 				INFOPLIST_FILE = CoreAnimationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CoreAnimationDemoTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
@@ -389,7 +391,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B36F07841979E1250083B46A /* Build configuration list for PBXProject "CoreAnimation" */ = {
+		B36F07841979E1250083B46A /* Build configuration list for PBXProject "CoreAnimationDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B36F07A31979E1260083B46A /* Debug */,
@@ -398,7 +400,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B36F07A51979E1260083B46A /* Build configuration list for PBXNativeTarget "CoreAnimation" */ = {
+		B36F07A51979E1260083B46A /* Build configuration list for PBXNativeTarget "CoreAnimationDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B36F07A61979E1260083B46A /* Debug */,
@@ -407,7 +409,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B36F07A81979E1260083B46A /* Build configuration list for PBXNativeTarget "CoreAnimationTests" */ = {
+		B36F07A81979E1260083B46A /* Build configuration list for PBXNativeTarget "CoreAnimationDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B36F07A91979E1260083B46A /* Debug */,
