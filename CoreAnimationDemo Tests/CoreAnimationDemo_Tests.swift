@@ -29,7 +29,7 @@ class CoreAnimationDemo_Tests: XCTestCase, CACircleViewDelegate {
         XCTAssert(true, "Pass")
     }
     
-    func testAnimationPerformance() {
+    func testAnimationCompletion() {
         let testView = CACircleView()
         testView.animationDelegate = self
         self.testVC.viewWillAppear(true)
