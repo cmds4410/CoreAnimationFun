@@ -9,7 +9,7 @@
 import UIKit
 import QuartzCore
 
-class ViewController: UIViewController {
+class CAViewController: UIViewController {
     
     let layer = CALayer()
     var numLabel:UILabel?

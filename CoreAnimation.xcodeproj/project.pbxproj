@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B36F078F1979E1260083B46A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F078E1979E1260083B46A /* AppDelegate.swift */; };
-		B36F07911979E1260083B46A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F07901979E1260083B46A /* ViewController.swift */; };
+		B36F07911979E1260083B46A /* CAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F07901979E1260083B46A /* CAViewController.swift */; };
 		B36F07941979E1260083B46A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B36F07921979E1260083B46A /* Main.storyboard */; };
 		B36F07961979E1260083B46A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B36F07951979E1260083B46A /* Images.xcassets */; };
 		B36F07A21979E1260083B46A /* CoreAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F07A11979E1260083B46A /* CoreAnimationTests.swift */; };
@@ -29,7 +29,7 @@
 		B36F07891979E1260083B46A /* CoreAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B36F078D1979E1260083B46A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B36F078E1979E1260083B46A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B36F07901979E1260083B46A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B36F07901979E1260083B46A /* CAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAViewController.swift; sourceTree = "<group>"; };
 		B36F07931979E1260083B46A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B36F07951979E1260083B46A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B36F079B1979E1260083B46A /* CoreAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				B36F078E1979E1260083B46A /* AppDelegate.swift */,
-				B36F07901979E1260083B46A /* ViewController.swift */,
+				B36F07901979E1260083B46A /* CAViewController.swift */,
 				B36F07921979E1260083B46A /* Main.storyboard */,
 				B36F07951979E1260083B46A /* Images.xcassets */,
 				B36F078C1979E1260083B46A /* Supporting Files */,
@@ -212,7 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B36F07911979E1260083B46A /* ViewController.swift in Sources */,
+				B36F07911979E1260083B46A /* CAViewController.swift in Sources */,
 				B36F078F1979E1260083B46A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +401,7 @@
 				B36F07A71979E1260083B46A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B36F07A81979E1260083B46A /* Build configuration list for PBXNativeTarget "CoreAnimationTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +410,7 @@
 				B36F07AA1979E1260083B46A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
