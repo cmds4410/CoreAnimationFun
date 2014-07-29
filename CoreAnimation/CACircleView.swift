@@ -109,14 +109,4 @@ class CACircleView: UIView {
         println("animation complete")
         self.animationDelegate?.finishedAnimating(flag)
     }
-
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect)
-    {
-        // Drawing code
-    }
-    */
-
 }
