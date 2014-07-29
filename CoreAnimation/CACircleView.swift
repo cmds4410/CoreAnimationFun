@@ -15,10 +15,10 @@ protocol CACircleViewDelegate {
 
 class CACircleView: UIView {
     
-    var numLabel:UILabel?
-    var count = 0
-    var timer: NSTimer?
-    let layerBuffer:CGFloat = 40
+    private var numLabel:UILabel?
+    private var count = 0
+    private var timer: NSTimer?
+    private let layerBuffer:CGFloat = 40
     var animationDelegate:CACircleViewDelegate?
 
     init(frame: CGRect) {
