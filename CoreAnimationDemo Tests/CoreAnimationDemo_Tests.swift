@@ -41,6 +41,8 @@ class CoreAnimationDemo_Tests: XCTestCase, CACircleViewDelegate {
         self.waitForExpectationsWithTimeout(testView.animationDuration, handler: nil)
     }
     
+    // MARK: CACircleViewDelegate
+    
     func finishedAnimating(succeeded: Bool) {
         self.animationExpectation?.fulfill()
         println("yay!")
