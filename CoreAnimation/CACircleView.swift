@@ -13,6 +13,17 @@ protocol CACircleViewDelegate {
     func finishedAnimating(succeeded: Bool) -> ()
 }
 
+class CADynamicHub:NSObject,UIDynamicItem {
+    var center:CGPoint
+    var bounds: CGRect
+    var transform: CGAffineTransform
+    init(center: CGPoint, bounds: CGRect, transform: CGAffineTransform) {
+        self.center = center
+        self.bounds = bounds
+        self.transform = transform
+    }
+}
+
 class CACircleView: UIView {
     
     private var numLabel:UILabel?
@@ -22,6 +33,8 @@ class CACircleView: UIView {
     
     var animationDelegate:CACircleViewDelegate?
     let animationDuration = 1.0
+    
+    var dynamicAnimator:UIDynamicAnimator?
 
     init(frame: CGRect) {
         super.init(frame: frame)
@@ -46,12 +59,29 @@ class CACircleView: UIView {
         circle.lineWidth = 30
         self.layer.addSublayer(circle)
         
+        // add dynamic behavior
+        
+        self.dynamicAnimator = UIDynamicAnimator(referenceView: self)
+        let dynamicHub = CADynamicHub(center: CGPoint(x: -5, y: -5), bounds: self.bounds, transform: CGAffineTransformIdentity)
+        
+        let snap = UISnapBehavior(item: dynamicHub, snapToPoint: CGPoint(x: 1, y: 1))
+        snap.damping = 2
+        
+        snap.action = {
+            CATransaction.begin()
+            CATransaction.setDisableActions(true)
+            circle.strokeEnd = dynamicHub.center.x
+            CATransaction.commit()
+        }
+        
+        self.dynamicAnimator?.addBehavior(snap)
+        
         let drawAnimation = CABasicAnimation()
         drawAnimation.delegate = self
         drawAnimation.duration = self.animationDuration
         drawAnimation.fromValue = 0
-        drawAnimation.toValue = self.animationDuration
-        circle.addAnimation(drawAnimation, forKey: "strokeEnd")
+        drawAnimation.toValue = 1
+//        circle.addAnimation(drawAnimation, forKey: "strokeEnd")
         
         let growAnimation = CABasicAnimation()
         growAnimation.duration = self.animationDuration
